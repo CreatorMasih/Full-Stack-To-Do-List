@@ -1,0 +1,156 @@
+/* Base styles for desktop */
+body {
+    font-family: 'Arial', sans-serif;
+    /* background-color: #f0f8ff; */
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 400px;
+    height: auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px #aaa;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#todo-list li {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fafafa;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in;
+}
+
+#todo-list li:hover {
+    transform: scale(1.05);
+}
+
+.task {
+    font-size: 16px;
+    color: #333;
+}
+
+button.edit-btn {
+    background-color: #ffc107;
+}
+
+button.delete-btn {
+    background-color: #dc3545;
+}
+
+button.complete-btn {
+    background-color: #17a2b8;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.7;
+}
+
+.time-stamp {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Media queries for responsiveness */
+
+/* Tablets (portrait and landscape) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+
+    #todo-list li {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    input[type="text"], button {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 12px;
+    }
+
+    #todo-list li {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
